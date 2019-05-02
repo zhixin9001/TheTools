@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetFramework", "DotNetFramework\DotNetFramework.csproj", "{F55600A2-4972-46CF-8438-C69801AF99AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore", "DotNetCore\DotNetCore.csproj", "{D9312266-F584-491D-8F98-6B805F3D86E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F55600A2-4972-46CF-8438-C69801AF99AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F55600A2-4972-46CF-8438-C69801AF99AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F55600A2-4972-46CF-8438-C69801AF99AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F55600A2-4972-46CF-8438-C69801AF99AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9312266-F584-491D-8F98-6B805F3D86E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9312266-F584-491D-8F98-6B805F3D86E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9312266-F584-491D-8F98-6B805F3D86E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9312266-F584-491D-8F98-6B805F3D86E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01AAAC67-F20F-4FDB-95BE-B62C957D68BD}
+	EndGlobalSection
+EndGlobal
