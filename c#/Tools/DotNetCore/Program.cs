@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNetCore.TextLog;
+using System;
 
 namespace DotNetCore
 {
@@ -7,6 +8,7 @@ namespace DotNetCore
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            LogHelper.WriteLog(new Exception("---"));
         }
     }
 }
