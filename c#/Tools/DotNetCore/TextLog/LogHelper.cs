@@ -11,6 +11,11 @@ namespace DotNetCore.TextLog
 
         public static void WriteLog(Exception e)
         {
+            WriteLog(JsonConvert.SerializeObject(e));
+        }
+
+        public static void WriteLog(string log)
+        {
             var dataDir = AppDomain.CurrentDomain.BaseDirectory;
             if (!Directory.Exists(Path.Combine(dataDir, LogHelper.LOG_DIR)))
             {
@@ -26,9 +31,8 @@ namespace DotNetCore.TextLog
 
             using (var writer = File.AppendText(currentMonthLogFile))
             {
-                writer.WriteLine(LogHelper.GetExceptionString(e));
+                writer.WriteLine(GetLogString(log));
             }
-
         }
 
         private static string GetCurrentMonthString()
@@ -37,9 +41,9 @@ namespace DotNetCore.TextLog
             return string.Format("{0}-{1}", currentDate.Year, currentDate.Month);
         }
 
-        private static string GetExceptionString(Exception e)
+        private static string GetLogString(string log)
         {
-            return string.Format("{0} - {1}", DateTime.Now.ToString(), JsonConvert.SerializeObject(e));
+            return string.Format("{0} - {1}", DateTime.Now.ToString(), log);
         }
     }
 }
