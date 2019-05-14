@@ -16,7 +16,9 @@ namespace DotNetCore.TextLog
 
         public static void WriteLog(string log)
         {
-            var dataDir = AppDomain.CurrentDomain.BaseDirectory;
+
+            var dataDir = AppDomain.CurrentDomain.BaseDirectory;// console,classlib,.net core asp.net, winform适用
+            //var dataDir =Application.Current.Host.Source //silverlight适用,或者将log方法添加到classlib中，再引用
             if (!Directory.Exists(Path.Combine(dataDir, LogHelper.LOG_DIR)))
             {
                 Directory.CreateDirectory(Path.Combine(dataDir, LogHelper.LOG_DIR));
